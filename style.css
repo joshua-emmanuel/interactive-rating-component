@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+}
+
+input,
+::placeholder,
+button {
+  font: inherit;
+}
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-grey: hsl(217, 12%, 63%);
+  --clr-medium-grey: hsl(216, 12%, 54%);
+  --clr-dark-blue: hsl(213, 19%, 18%);
+  --clr-very-dark-blue: hsl(216, 12%, 8%);
+
+  --clr-orange: hsl(25, 97%, 53%);
+
+  --round-sm: 1rem;
+  --round-md: 1.5rem;
+  --round-full: 100vw;
+
+  --font-family: 'Overpass', sans-serif;
+
+  --fw-reg: 400;
+  --fw-bold: 700;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--fw-reg);
+  line-height: 1.5;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: var(--clr-very-dark-blue);
+}
+
+main {
+  max-width: min(400px, 100% - 2rem);
+  padding: 2rem;
+  border-radius: var(--round-sm);
+  color: var(--clr-medium-grey);
+  background-color: var(--clr-dark-blue);
+}
+
+h1 {
+  color: var(--clr-white);
+}
+
+button {
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.star {
+  border-radius: var(--round-full);
+  padding: 1rem;
+  background-color: hsl(214, 19%, 23%);
+}
+
+.rating-text {
+  display: grid;
+  gap: .5rem;
+}
+
+.ratings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--round-full);
+  color: var(--clr-light-grey);
+  background-color: hsl(214, 19%, 23%);
+}
+
+.rating[aria-selected="true"] {
+  color: var(--clr-white);
+  background-color: var(--clr-orange);
+}
+
+.rating[aria-selected="true"]:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-orange);
+}
+
+.rating:hover {
+  color: hsl(214, 19%, 23%);
+  background-color: var(--clr-light-grey); 
+}
+
+button[type="submit"] {
+  text-transform: uppercase;
+  border-radius: var(--round-md);
+  padding: 1rem;
+  color: var(--clr-white);
+  background-color: var(--clr-orange);
+}
+
+button[type="submit"]:hover {
+  color: var(--clr-orange);
+  background-color: var(--clr-white);
+}
+
+
+.success {
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.success img {
+  justify-self: center;
+}
+
+.success > p {
+  width: 60%;
+  padding: .25rem;
+  border-radius: var(--round-sm);
+  margin-inline: auto;
+  color: var(--clr-orange);
+  background-color: hsl(214, 19%, 23%);
+}
+
+[hidden] {
+  display: none;
+}
